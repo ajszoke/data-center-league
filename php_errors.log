@@ -1,0 +1,39 @@
+[01-Sep-2017 02:07:53 UTC] PHP Fatal error:  Call to undefined function update_cuser() in /home/ubuntu/workspace/account/index.php on line 174
+[01-Sep-2017 02:07:53 UTC] PHP Stack trace:
+[01-Sep-2017 02:07:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/account/index.php:0
+[01-Sep-2017 04:16:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/model/player_db.php:74
+Stack trace:
+#0 /home/ubuntu/workspace/model/player_db.php(74): PDOStatement->execute()
+#1 /home/ubuntu/workspace/account/index.php(79): add_user('shawnkrukowski@...', 'Shawn', 'Moderator', 'P@ssword')
+#2 {main}
+  thrown in /home/ubuntu/workspace/model/player_db.php on line 74
+[01-Sep-2017 04:19:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/model/player_db.php:74
+Stack trace:
+#0 /home/ubuntu/workspace/model/player_db.php(74): PDOStatement->execute()
+#1 /home/ubuntu/workspace/account/index.php(79): add_user('shawnkrukowski@...', 'Shawn', 'Moderator', 'P@ssword')
+#2 {main}
+  thrown in /home/ubuntu/workspace/model/player_db.php on line 74
+[01-Sep-2017 04:21:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/model/player_db.php:76
+Stack trace:
+#0 /home/ubuntu/workspace/model/player_db.php(76): PDOStatement->execute()
+#1 /home/ubuntu/workspace/account/index.php(79): add_user('shawnkrukowski@...', 'Shawn', 'Moderator', 'P@ssword')
+#2 {main}
+  thrown in /home/ubuntu/workspace/model/player_db.php on line 76
+[01-Sep-2017 04:21:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/model/player_db.php:76
+Stack trace:
+#0 /home/ubuntu/workspace/model/player_db.php(76): PDOStatement->execute()
+#1 /home/ubuntu/workspace/account/index.php(79): add_user('shawnkrukowski@...', 'Shawn', 'Moderator', 'P@ssword')
+#2 {main}
+  thrown in /home/ubuntu/workspace/model/player_db.php on line 76
+[01-Sep-2017 05:11:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /home/ubuntu/workspace/model/player_db.php:74
+Stack trace:
+#0 /home/ubuntu/workspace/model/player_db.php(74): PDOStatement->execute()
+#1 /home/ubuntu/workspace/account/index.php(79): add_user('jasons_email@em...', 'Jason', 'S', 'password')
+#2 {main}
+  thrown in /home/ubuntu/workspace/model/player_db.php on line 74
+[01-Sep-2017 17:09:58 UTC] PHP Fatal error:  Call to undefined function display_error() in /home/ubuntu/workspace/team/index.php on line 22
+[01-Sep-2017 17:09:58 UTC] PHP Stack trace:
+[01-Sep-2017 17:09:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/team/index.php:0
+[01-Sep-2017 17:10:25 UTC] PHP Fatal error:  Call to undefined function display_error() in /home/ubuntu/workspace/team/index.php on line 22
+[01-Sep-2017 17:10:25 UTC] PHP Stack trace:
+[01-Sep-2017 17:10:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/team/index.php:0
