@@ -1,7 +1,7 @@
 <?php
 function get_team($teamID) {
     global $db;
-    $query = 'SELECT * FROM teams WHERE team_id = :teamID';
+    $query = 'SELECT * FROM Teams_Table WHERE team_id = :teamID';
     $statement = $db->prepare($query);
     $statement->bindValue(':teamID', $teamID);
     $statement->execute();

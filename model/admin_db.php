@@ -2,7 +2,7 @@
 function is_valid_admin_login($email, $password) {
     global $db;
     $password = sha1($email . $password);
-    $query = 'SELECT * FROM administrators
+    $query = 'SELECT * FROM Admins_Table
               WHERE email_address = :email AND password = :password';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
@@ -15,7 +15,7 @@ function is_valid_admin_login($email, $password) {
 
 function admin_count() {
     global $db;
-    $query = 'SELECT count(*) AS adminCount FROM administrators';
+    $query = 'SELECT count(*) AS adminCount FROM Admins_Table';
     $statement = $db->prepare($query);
     $statement->execute();
     $result = $statement->fetch();
@@ -25,7 +25,7 @@ function admin_count() {
 
 function get_all_admins() {
     global $db;
-    $query = 'SELECT * FROM administrators ORDER BY last_name, first_name';
+    $query = 'SELECT * FROM Admins_Table ORDER BY last_name, first_name';
     $statement = $db->prepare($query);
     $statement->execute();
     $admins = $statement->fetchAll();
@@ -35,7 +35,7 @@ function get_all_admins() {
 
 function get_admin ($adminID) {
     global $db;
-    $query = 'SELECT * FROM administrators WHERE admin_id = :adminID';
+    $query = 'SELECT * FROM Admins_Table WHERE admin_id = :adminID';
     $statement = $db->prepare($query);
     $statement->bindValue(':adminID', $adminID);
     $statement->execute();
@@ -46,7 +46,7 @@ function get_admin ($adminID) {
 
 function get_admin_by_email ($email) {
     global $db;
-    $query = 'SELECT * FROM administrators WHERE email_address = :email';
+    $query = 'SELECT * FROM Admins_Table WHERE email_address = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->execute();
@@ -58,7 +58,7 @@ function get_admin_by_email ($email) {
 function is_valid_admin_email($email) {
     global $db;
     $query = '
-        SELECT * FROM administrators
+        SELECT * FROM Admins_Table
         WHERE email_address = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
@@ -72,7 +72,7 @@ function add_admin($email, $firstName, $lastName, $password_1) {
     global $db;
     $password = sha1($email . $password_1);
     $query = '
-        INSERT INTO administrators (email_address, password, first_name, last_name)
+        INSERT INTO Admins_Table (email_address, password, first_name, last_name)
         VALUES (:email, :password, :firstName, :lastName)';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
@@ -89,7 +89,7 @@ function update_admin($adminID, $email, $firstName, $lastName,
                       $password_1, $password_2) {
     global $db;
     $query = '
-        UPDATE administrators
+        UPDATE Admins_Table
         SET email_address = :email,
             first_name = :firstName,
             last_name = :lastName
@@ -110,7 +110,7 @@ function update_admin($adminID, $email, $firstName, $lastName,
         }
         $password = sha1($email . $password_1);
         $query = '
-            UPDATE administrators
+            UPDATE Admins_Table
             SET password = :password
             WHERE admin_id = :adminID';
         $statement = $db->prepare($query);
@@ -123,7 +123,7 @@ function update_admin($adminID, $email, $firstName, $lastName,
 
 function delete_admin($adminID) {
     global $db;
-    $query = 'DELETE FROM administrators WHERE admin_id = :adminID';
+    $query = 'DELETE FROM Admins_Table WHERE admin_id = :adminID';
     $statement = $db->prepare($query);
     $statement->bindValue(':admin_id', $admin_D);
     $statement->execute();

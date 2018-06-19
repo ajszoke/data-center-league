@@ -72,7 +72,7 @@ switch ($action) {
         }
 
         // Display Admin Menu page
-        redirect('..');
+        redirect('../');
         break;
     case 'view_account':
         // Get all accounts from database

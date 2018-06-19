@@ -1,7 +1,7 @@
 <?php
 function get_league_players($leagueID) {
     global $db;
-    $query = 'SELECT league_player_ids FROM leagues WHERE league_id = :leagueID';
+    $query = 'SELECT league_player_ids FROM Leagues_Table WHERE league_id = :leagueID';
     $statement = $db->prepare($query);
     $statement->bindValue(':leagueID', $leagueID);
     $statement->execute();
